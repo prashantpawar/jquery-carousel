@@ -30,16 +30,42 @@ $(function () {
         slideIncrement = slideWidth,
         numSlides = $(slideTarget).length,
         endPosition = ((numSlides * slideWidth) - slideWidth) * -1,
-        controls = '<div class=\"controls\"></div>',
+        controls,
         leftButton = '<button class=\"left\"> left </button>',
         rightButton = '<button class=\"right\"> right </button>';
 
     containerElement = "." + $(carouselElement + " div:first-child").attr("class");
     console.log(carouselElement);
 
-    $(carouselElement).append(controls);
-    $('.controls').append(leftButton);
-    $('.controls').append(rightButton);
+    //Instead of doing $(".element").append(blahblah) do 
+    //$(".element").each(function() {
+    //    this.append(blahblah);
+    //});
+    // Now just to keep something in the mind, in the above case, each isn't really required,
+    // We need to use each() instead of simple selector because we need the reference to the element 
+    // where we want to perform a certain kind of activities. 
+    $(carouselElement).each(function () {
+        //Here first create a new element
+        controls = $('<div class="controls">
+            <button class="left"> left </button>
+            <button class="right"> right </button>
+        </div>');
+        //Add all the necessary event hooks as needed
+        controls.child(".left").click(function () {
+            slide('left');
+        });
+        controls.child(".right").click(function () {
+            slide('right');
+        });
+        
+        //Now after you have prepared the whole object, append it to the carousel.
+        $(this).append(controls);
+    });
+
+    $(".right").click(function () {
+        slide('right');
+    });
+    });
 
     function slide(direction) {
         var xPosition = currentPosition,
@@ -70,12 +96,5 @@ $(function () {
 
     }
 
-    $(".left").click(function () {
-        slide('left');
-    });
-
-    $(".right").click(function () {
-        slide('right');
-    });
 
 });
