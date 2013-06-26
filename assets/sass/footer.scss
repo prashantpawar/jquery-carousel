@@ -1,0 +1,25 @@
+/* Footer */
+
+.footer {
+	border-top: $mediumgray 6px solid;
+	background: #5f99be;
+
+  .container{
+      background: #5f99be;
+      padding-top: 10px;
+    }
+	li{
+		display: inline;
+	}
+	
+	li a{
+		margin-left: 15px;
+		margin-right: 15px;
+		font-weight: normal;
+		color: $white;
+	}
+	
+	p{
+		padding-right: 15px;
+	}
+}

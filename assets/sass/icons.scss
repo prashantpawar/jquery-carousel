@@ -1,0 +1,6 @@
+.accordion-left{
+  @include icon(0, 0, 35px, 35px);
+}
+.accordion-right{
+  @include icon(-35px, 0, 35px, 35px);
+}

@@ -1,0 +1,45 @@
+/* Header */
+
+.header {
+    width: 100%;
+	z-index: 0;
+    @include box-shadow (3px, -3px, 3px, -2px, $mediumgray);
+	background: $mediumgray; /* Older browsers */
+	background: -moz-linear-gradient(top,  $paleblue 80%, $robinsegg 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(80%,$paleblue), color-stop(100%,$robinsegg)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  $paleblue 80%,$robinsegg 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  $paleblue 80%,$robinsegg 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  $paleblue 80%,$robinsegg 100%); /* IE10+ */
+	background: linear-gradient(top,  $paleblue 80%,$robinsegg 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$paleblue', endColorstr='$robinsegg',GradientType=0 ); /* IE6-9 */
+	margin-bottom: 30px;
+    margin-top: 0;
+}
+.header-content{
+  height: 350px;
+  padding-top: 15px;
+  position: relative;
+  p{
+      line-height: 18px;
+  }
+
+  h1{
+      font-size: 14px;
+  }
+  .messages{
+      background: $white url('../images/caret.png') no-repeat 90% 50%;
+      padding: 10px 10px 10px 0;
+      position: absolute;
+      display: block;
+      width: 141px;
+      border-top-left-radius:10px;
+      border-top-right-radius:10px;
+      border: none;
+      bottom:0;
+      margin-left:auto; margin-right: auto;
+  }
+  .message-icons{
+      /* float: left; */
+      margin-top: 25px;
+  }
+}

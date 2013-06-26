@@ -1,0 +1,64 @@
+/* formatting */
+
+$white: #FFF;
+$robinsegg: #bbddf9;
+$darkblue: #3c6794;
+$mediumgray: #CCC;
+$mediumblue: #5f99be;
+$darkgray: #222;
+$paleblue: #fbfcfe;
+
+@mixin helvetica{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+@mixin georgia{
+	font-family: "Georgia", Courier, serif;
+}
+
+body{
+	@include helvetica;
+    background: $white url('../images/bg-repeat.gif') repeat-x bottom center;
+}
+/*To the left, to the right */
+.logo {
+  padding: 10px;
+}
+address{
+	font-style: normal;
+}
+.float-left{
+	float: left;
+}
+.float-right{
+	float: right;
+}
+/* Element Styling */
+
+li{
+	list-style: none;
+}
+h1, h2, h3, h4, h5, h6, b{
+	@include georgia;
+	color: $darkblue;
+}
+.heading{
+	color: #8bb4d0;
+}
+a{
+	font-weight:bold;
+	text-decoration: none;
+	color: $darkblue;
+}
+.img-frame{
+	padding: 5px;
+	border: 1px solid $mediumgray;
+	box-shadow: 0px 0px 5px 2px $mediumgray;
+}
+.pad-left{
+	padding-left:30px;
+}
+
+section {
+  padding-bottom: 20px;
+}

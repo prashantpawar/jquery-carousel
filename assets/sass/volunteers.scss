@@ -1,0 +1,53 @@
+/* Volunteers */
+$slidewidth: 960px;
+$numslides: 3;
+$containerwidth: $slidewidth * $numslides;
+#volunteers {
+  overflow: hidden;
+  .carousel{
+    .one {
+      background: lavender;
+    }
+    .two {
+      background: lightpink;
+    }
+    .slide{
+      float: left;
+      width: $slidewidth;
+      height: auto;
+    }
+    .carousel {
+      width: $slidewidth;
+      height: 275px;
+      overflow: hidden;
+      /*position: relative;*/
+    }
+    .slide-container{
+      position: relative;
+      width:$containerwidth;
+    }
+    img{ float: left; }
+
+    figure{
+      display:inline-block;
+      margin: 10px 10px;
+      padding: 10px 15px;
+    }
+    figcaption{
+      display: block;
+      float: right;
+      margin-left: 10px;
+    }
+    .num-proj, .num-hours{
+        @include georgia;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .num-proj {
+      color: #555555;
+    }
+    .num-hours{
+      color: $darkblue;
+    }
+  }
+}

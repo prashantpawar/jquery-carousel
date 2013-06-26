@@ -1,0 +1,18 @@
+@mixin box-shadow ($x, $y, $blur, $spread, $color){
+  -moz-box-shadow: $x $y $blur $spread $color;
+  -webkit-box-shadow: $x $y $blur $spread $color;
+  box-shadow: $x $y $blur $spread $color;
+  behavior: url(../scripts/PIE.htc);
+}
+
+@mixin icon ($x, $y, $width, $height) {
+    display: inline-block;
+    width: $width;
+    height: $height;
+    line-height: $height;
+    vertical-align: text-top;
+    background-image: url("../images/slider-arrows.png");
+    background-position: $x $y;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+}
