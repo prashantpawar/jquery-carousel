@@ -22,7 +22,7 @@ $(function () {
     */
 
     var carouselElement = " .carousel",
-        containerElement = "." + $(carouselElement + " div:first-child").attr("class"),
+        containerElement,
         currentPosition = 0,
         startPosition = 0,
         slideTarget = containerElement + ' > section',
@@ -34,6 +34,7 @@ $(function () {
         leftButton = '<button class=\"left\"> left </button>',
         rightButton = '<button class=\"right\"> right </button>';
 
+    containerElement = "." + $(carouselElement + " div:first-child").attr("class");
     console.log(carouselElement);
 
     $(carouselElement).append(controls);
